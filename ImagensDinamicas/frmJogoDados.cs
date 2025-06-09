@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
+using static ImagensDinamicas.frmCarregaFoto;
 
 namespace ImagensDinamicas
 {
@@ -29,8 +30,7 @@ namespace ImagensDinamicas
         }
         private void frmJogoDados_Load(object sender, EventArgs e)
         {
-            lblJogador1.Text += jogador1;
-            lblJogador2 .Text += jogador2;
+          
         }
 
 
@@ -67,6 +67,15 @@ namespace ImagensDinamicas
             String arquivoDado = ".\\imagens\\dado" + valorDado.ToString() + ".jpg";
             dado.Image = Image.FromFile(arquivoDado);
             return valorDado;
+        }
+
+        private void frmJogoDados_Load_1(object sender, EventArgs e)
+        {
+            txtJogador1.Text = Usuario.NomeJogador1;
+            txtJogador2.Text = Usuario.NomeJogador2;
+
+            picFoto.Image = Usuario.FotoJogador1;
+            picFoto1.Image = Usuario.FotoJogador2;
         }
 
         private void frmJogoDados_FormClosed(object sender, FormClosedEventArgs e)

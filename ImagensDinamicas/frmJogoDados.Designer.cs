@@ -32,21 +32,21 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmJogoDados));
             this.picDado1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblJogador1 = new System.Windows.Forms.Label();
             this.picDado2 = new System.Windows.Forms.PictureBox();
-            this.lblJogador2 = new System.Windows.Forms.Label();
             this.lblPlacar2 = new System.Windows.Forms.Label();
             this.btnJogar = new System.Windows.Forms.Button();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblPlacar1 = new System.Windows.Forms.Label();
             this.lblPlaca2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.picFoto1 = new System.Windows.Forms.PictureBox();
+            this.txtJogador1 = new System.Windows.Forms.TextBox();
+            this.txtJogador2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picDado1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDado2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto1)).BeginInit();
             this.SuspendLayout();
             // 
             // picDado1
@@ -58,18 +58,6 @@
             this.picDado1.TabIndex = 0;
             this.picDado1.TabStop = false;
             // 
-            // lblJogador1
-            // 
-            this.lblJogador1.AutoSize = true;
-            this.lblJogador1.BackColor = System.Drawing.Color.White;
-            this.lblJogador1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJogador1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblJogador1.Location = new System.Drawing.Point(119, 27);
-            this.lblJogador1.Name = "lblJogador1";
-            this.lblJogador1.Size = new System.Drawing.Size(63, 13);
-            this.lblJogador1.TabIndex = 1;
-            this.lblJogador1.Text = "Jogador 1";
-            // 
             // picDado2
             // 
             this.picDado2.BackColor = System.Drawing.Color.Transparent;
@@ -78,17 +66,6 @@
             this.picDado2.Size = new System.Drawing.Size(188, 181);
             this.picDado2.TabIndex = 3;
             this.picDado2.TabStop = false;
-            // 
-            // lblJogador2
-            // 
-            this.lblJogador2.AutoSize = true;
-            this.lblJogador2.BackColor = System.Drawing.Color.White;
-            this.lblJogador2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJogador2.Location = new System.Drawing.Point(412, 27);
-            this.lblJogador2.Name = "lblJogador2";
-            this.lblJogador2.Size = new System.Drawing.Size(63, 13);
-            this.lblJogador2.TabIndex = 4;
-            this.lblJogador2.Text = "Jogador 2";
             // 
             // lblPlacar2
             // 
@@ -155,23 +132,37 @@
             this.lblPlaca2.Text = "0";
             this.lblPlaca2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 41);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.BackColor = System.Drawing.Color.Transparent;
+            this.picFoto.Location = new System.Drawing.Point(56, 12);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(57, 41);
+            this.picFoto.TabIndex = 9;
+            this.picFoto.TabStop = false;
             // 
-            // pictureBox2
+            // picFoto1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(481, 12);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(57, 41);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            this.picFoto1.BackColor = System.Drawing.Color.Transparent;
+            this.picFoto1.Location = new System.Drawing.Point(481, 12);
+            this.picFoto1.Name = "picFoto1";
+            this.picFoto1.Size = new System.Drawing.Size(57, 41);
+            this.picFoto1.TabIndex = 10;
+            this.picFoto1.TabStop = false;
+            // 
+            // txtJogador1
+            // 
+            this.txtJogador1.Location = new System.Drawing.Point(119, 33);
+            this.txtJogador1.Name = "txtJogador1";
+            this.txtJogador1.Size = new System.Drawing.Size(100, 20);
+            this.txtJogador1.TabIndex = 11;
+            // 
+            // txtJogador2
+            // 
+            this.txtJogador2.Location = new System.Drawing.Point(375, 33);
+            this.txtJogador2.Name = "txtJogador2";
+            this.txtJogador2.Size = new System.Drawing.Size(100, 20);
+            this.txtJogador2.TabIndex = 12;
             // 
             // frmJogoDados
             // 
@@ -181,25 +172,26 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(588, 373);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtJogador2);
+            this.Controls.Add(this.txtJogador1);
+            this.Controls.Add(this.picFoto1);
+            this.Controls.Add(this.picFoto);
             this.Controls.Add(this.lblPlaca2);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnReiniciar);
             this.Controls.Add(this.btnJogar);
             this.Controls.Add(this.lblPlacar2);
-            this.Controls.Add(this.lblJogador2);
             this.Controls.Add(this.picDado2);
             this.Controls.Add(this.lblPlacar1);
-            this.Controls.Add(this.lblJogador1);
             this.Controls.Add(this.picDado1);
             this.Name = "frmJogoDados";
             this.Text = "Jogo de Dados";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmJogoDados_FormClosed);
+            this.Load += new System.EventHandler(this.frmJogoDados_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.picDado1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDado2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,16 +201,16 @@
 
         private System.Windows.Forms.PictureBox picDado1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label lblJogador1;
         private System.Windows.Forms.PictureBox picDado2;
-        private System.Windows.Forms.Label lblJogador2;
         private System.Windows.Forms.Label lblPlacar2;
         private System.Windows.Forms.Button btnJogar;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblPlacar1;
         private System.Windows.Forms.Label lblPlaca2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picFoto;
+        private System.Windows.Forms.PictureBox picFoto1;
+        private System.Windows.Forms.TextBox txtJogador1;
+        private System.Windows.Forms.TextBox txtJogador2;
     }
 }

@@ -36,18 +36,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.ta = new System.Windows.Forms.Label();
             this.ae = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lblJogador1 = new System.Windows.Forms.TextBox();
-            this.lblJogador2 = new System.Windows.Forms.TextBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.picFoto1 = new System.Windows.Forms.PictureBox();
+            this.txtJogador1 = new System.Windows.Forms.TextBox();
+            this.txtJogador2 = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnJogoDado
@@ -57,7 +58,7 @@
             this.btnJogoDado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJogoDado.ForeColor = System.Drawing.Color.White;
             this.btnJogoDado.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnJogoDado.Location = new System.Drawing.Point(53, 96);
+            this.btnJogoDado.Location = new System.Drawing.Point(12, 22);
             this.btnJogoDado.Name = "btnJogoDado";
             this.btnJogoDado.Size = new System.Drawing.Size(176, 143);
             this.btnJogoDado.TabIndex = 0;
@@ -69,7 +70,7 @@
             this.btnCarregaFoto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCarregaFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCarregaFoto.BackgroundImage")));
             this.btnCarregaFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCarregaFoto.Location = new System.Drawing.Point(361, 87);
+            this.btnCarregaFoto.Location = new System.Drawing.Point(406, 22);
             this.btnCarregaFoto.Name = "btnCarregaFoto";
             this.btnCarregaFoto.Size = new System.Drawing.Size(176, 143);
             this.btnCarregaFoto.TabIndex = 1;
@@ -79,29 +80,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(86, 251);
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(24, 168);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(151, 18);
             this.label1.TabIndex = 2;
             this.label1.Text = "JOGO DE DADOS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 251);
+            this.label2.Font = new System.Drawing.Font("Mongolian Baiti", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(414, 168);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
+            this.label2.Size = new System.Drawing.Size(168, 18);
             this.label2.TabIndex = 3;
             this.label2.Text = "CARREGAR FOTOS";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe Script", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Segoe Script", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
             this.label3.LiveSetting = System.Windows.Forms.Automation.AutomationLiveSetting.Polite;
-            this.label3.Location = new System.Drawing.Point(285, 34);
+            this.label3.Location = new System.Drawing.Point(247, 67);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 27);
+            this.label3.Size = new System.Drawing.Size(114, 50);
             this.label3.TabIndex = 4;
             this.label3.Text = "MENU";
             // 
@@ -109,7 +112,7 @@
             // 
             this.ta.AutoSize = true;
             this.ta.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ta.Location = new System.Drawing.Point(86, 380);
+            this.ta.Location = new System.Drawing.Point(86, 376);
             this.ta.Name = "ta";
             this.ta.Size = new System.Drawing.Size(64, 16);
             this.ta.TabIndex = 5;
@@ -119,50 +122,50 @@
             // 
             this.ae.AutoSize = true;
             this.ae.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ae.Location = new System.Drawing.Point(86, 449);
+            this.ae.Location = new System.Drawing.Point(86, 453);
             this.ae.Name = "ae";
             this.ae.Size = new System.Drawing.Size(64, 16);
             this.ae.TabIndex = 6;
             this.ae.Text = "Jogador 2:";
             // 
-            // pictureBox1
+            // picFoto
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 358);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 50);
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.picFoto.Location = new System.Drawing.Point(12, 358);
+            this.picFoto.Name = "picFoto";
+            this.picFoto.Size = new System.Drawing.Size(68, 50);
+            this.picFoto.TabIndex = 7;
+            this.picFoto.TabStop = false;
             // 
-            // pictureBox2
+            // picFoto1
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(12, 430);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(68, 50);
-            this.pictureBox2.TabIndex = 8;
-            this.pictureBox2.TabStop = false;
+            this.picFoto1.Location = new System.Drawing.Point(12, 429);
+            this.picFoto1.Name = "picFoto1";
+            this.picFoto1.Size = new System.Drawing.Size(68, 50);
+            this.picFoto1.TabIndex = 8;
+            this.picFoto1.TabStop = false;
             // 
-            // lblJogador1
+            // txtJogador1
             // 
-            this.lblJogador1.BackColor = System.Drawing.Color.Maroon;
-            this.lblJogador1.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblJogador1.Location = new System.Drawing.Point(159, 376);
-            this.lblJogador1.Name = "lblJogador1";
-            this.lblJogador1.Size = new System.Drawing.Size(100, 20);
-            this.lblJogador1.TabIndex = 9;
+            this.txtJogador1.BackColor = System.Drawing.Color.Silver;
+            this.txtJogador1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txtJogador1.Location = new System.Drawing.Point(165, 372);
+            this.txtJogador1.Name = "txtJogador1";
+            this.txtJogador1.Size = new System.Drawing.Size(100, 20);
+            this.txtJogador1.TabIndex = 9;
             // 
-            // lblJogador2
+            // txtJogador2
             // 
-            this.lblJogador2.BackColor = System.Drawing.Color.Maroon;
-            this.lblJogador2.ForeColor = System.Drawing.Color.White;
-            this.lblJogador2.Location = new System.Drawing.Point(159, 447);
-            this.lblJogador2.Name = "lblJogador2";
-            this.lblJogador2.Size = new System.Drawing.Size(100, 20);
-            this.lblJogador2.TabIndex = 10;
+            this.txtJogador2.BackColor = System.Drawing.Color.Silver;
+            this.txtJogador2.ForeColor = System.Drawing.Color.Black;
+            this.txtJogador2.Location = new System.Drawing.Point(165, 449);
+            this.txtJogador2.Name = "txtJogador2";
+            this.txtJogador2.Size = new System.Drawing.Size(100, 20);
+            this.txtJogador2.TabIndex = 10;
             // 
             // btnSair
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSair.Location = new System.Drawing.Point(494, 457);
+            this.btnSair.Location = new System.Drawing.Point(507, 437);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 42);
             this.btnSair.TabIndex = 11;
@@ -173,10 +176,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(277, 312);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(372, 266);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 16);
+            this.label6.Size = new System.Drawing.Size(125, 36);
             this.label6.TabIndex = 12;
             this.label6.Text = "PLACAR";
             // 
@@ -184,7 +187,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(303, 383);
+            this.label7.Location = new System.Drawing.Point(373, 332);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 25);
             this.label7.TabIndex = 13;
@@ -194,7 +197,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(303, 421);
+            this.label8.Location = new System.Drawing.Point(373, 383);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(107, 25);
             this.label8.TabIndex = 14;
@@ -204,7 +207,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(416, 383);
+            this.label9.Location = new System.Drawing.Point(489, 332);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(23, 25);
             this.label9.TabIndex = 15;
@@ -214,27 +217,38 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(416, 421);
+            this.label10.Location = new System.Drawing.Point(489, 383);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(23, 25);
             this.label10.TabIndex = 16;
             this.label10.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(58, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 36);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "JOGADOR";
             // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 511);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnSair);
-            this.Controls.Add(this.lblJogador2);
-            this.Controls.Add(this.lblJogador1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.txtJogador2);
+            this.Controls.Add(this.txtJogador1);
+            this.Controls.Add(this.picFoto1);
+            this.Controls.Add(this.picFoto);
             this.Controls.Add(this.ae);
             this.Controls.Add(this.ta);
             this.Controls.Add(this.label3);
@@ -245,8 +259,8 @@
             this.Name = "frmMenu";
             this.Text = "Menu Projetos Imagens Dinâmicas";
             this.Load += new System.EventHandler(this.frmMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFoto1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,15 +275,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label ta;
         private System.Windows.Forms.Label ae;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.TextBox lblJogador1;
-        private System.Windows.Forms.TextBox lblJogador2;
+        private System.Windows.Forms.PictureBox picFoto;
+        private System.Windows.Forms.PictureBox picFoto1;
+        private System.Windows.Forms.TextBox txtJogador1;
+        private System.Windows.Forms.TextBox txtJogador2;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
     }
 }

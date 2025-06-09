@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static ImagensDinamicas.frmCarregaFoto;
 
 namespace ImagensDinamicas
 {
@@ -19,7 +20,7 @@ namespace ImagensDinamicas
 
         private void btnJogoDado_Click(object sender, EventArgs e)
         {
-               frmJogoDados jogodado = new frmJogoDados(lblJogador1.Text, lblJogador2.Text);
+               frmJogoDados jogodado = new frmJogoDados(txtJogador1.Text, txtJogador2.Text);
                jogodado.ShowDialog();
                
         }
@@ -32,25 +33,24 @@ namespace ImagensDinamicas
 
         private void frmMenu_Load(object sender, EventArgs e)
         {
+            txtJogador1.Text = Usuario.NomeJogador1;
+            txtJogador2.Text = Usuario.NomeJogador2;
+
+            picFoto.Image = Usuario.FotoJogador1;
+            picFoto1.Image = Usuario.FotoJogador2;
 
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult resposta = MessageBox.Show("Deseja sair?", "MENU - CTI", MessageBoxButtons.YesNo);
 
-        }
-        private void frmMenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            DialogResult resposta;
-            resposta = MessageBox.Show("Deseja sair?", "MENU - CTI", MessageBoxButtons.YesNo);
-
-            if (resposta == DialogResult.No)
+            if (resposta == DialogResult.Yes)
             {
                 Application.Exit();
             }
 
-
         }
+   
     }
 }
