@@ -17,12 +17,14 @@ namespace ImagensDinamicas
         {
             InitializeComponent();
         }
-
+        
         private void btnJogoDado_Click(object sender, EventArgs e)
         {
-               frmJogoDados jogodado = new frmJogoDados(txtJogador1.Text, txtJogador2.Text);
-               jogodado.ShowDialog();
-               
+            frmJogoDados jogodado = new frmJogoDados(txtJogador1.Text, txtJogador2.Text);
+            jogodado.ShowDialog();
+
+            resultado.Text = $"{txtJogador1.Text}{jogodado.PlacarJogador1}";
+            resultado1.Text = $"{txtJogador2.Text}{jogodado.PlacarJogador2}";
         }
 
         private void btnCarregaFoto_Click(object sender, EventArgs e)
@@ -51,6 +53,10 @@ namespace ImagensDinamicas
             }
 
         }
-   
+
+        private void picFoto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

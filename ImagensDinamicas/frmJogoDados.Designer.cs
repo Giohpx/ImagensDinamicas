@@ -135,6 +135,8 @@
             // picFoto
             // 
             this.picFoto.BackColor = System.Drawing.Color.Transparent;
+            this.picFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto.BackgroundImage")));
+            this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto.Location = new System.Drawing.Point(56, 12);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(57, 41);
@@ -144,6 +146,8 @@
             // picFoto1
             // 
             this.picFoto1.BackColor = System.Drawing.Color.Transparent;
+            this.picFoto1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto1.BackgroundImage")));
+            this.picFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto1.Location = new System.Drawing.Point(481, 12);
             this.picFoto1.Name = "picFoto1";
             this.picFoto1.Size = new System.Drawing.Size(57, 41);

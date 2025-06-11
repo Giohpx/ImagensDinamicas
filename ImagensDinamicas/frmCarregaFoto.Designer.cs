@@ -80,14 +80,20 @@
             this.CheckFoto.Text = "Com foto";
             this.CheckFoto.UseVisualStyleBackColor = false;
             this.CheckFoto.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.CheckFoto.Click += new System.EventHandler(this.CheckFoto_Click);
             // 
             // picFoto
             // 
+            this.picFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto.BackgroundImage")));
+            this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picFoto.ErrorImage = null;
+            this.picFoto.InitialImage = null;
             this.picFoto.Location = new System.Drawing.Point(157, 109);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(89, 83);
             this.picFoto.TabIndex = 3;
             this.picFoto.TabStop = false;
+            this.picFoto.Visible = false;
             // 
             // btnCarregarFoto
             // 
@@ -150,11 +156,16 @@
             // 
             // picFoto1
             // 
+            this.picFoto1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto1.BackgroundImage")));
+            this.picFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picFoto1.ErrorImage = null;
+            this.picFoto1.InitialImage = null;
             this.picFoto1.Location = new System.Drawing.Point(157, 226);
             this.picFoto1.Name = "picFoto1";
             this.picFoto1.Size = new System.Drawing.Size(89, 84);
             this.picFoto1.TabIndex = 3;
             this.picFoto1.TabStop = false;
+            this.picFoto1.Visible = false;
             // 
             // checkBox1
             // 
@@ -166,6 +177,7 @@
             this.checkBox1.Text = "Com foto";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            this.checkBox1.Click += new System.EventHandler(this.checkBox1_Click);
             // 
             // btnCarregarFoto2
             // 

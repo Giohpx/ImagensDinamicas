@@ -59,6 +59,15 @@ namespace ImagensDinamicas
                 MessageBox.Show("Houve um empate nessa rodada!!!", "Jogo de dados CTI",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        public int PlacarJogador1
+        {
+            get { return placar1; }
+        }
+
+        public int PlacarJogador2
+        {
+            get { return placar2; }
+        }
 
         private int SorteioDado(PictureBox dado)
         {

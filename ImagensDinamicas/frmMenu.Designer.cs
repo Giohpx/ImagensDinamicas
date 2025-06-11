@@ -42,11 +42,11 @@
             this.txtJogador2 = new System.Windows.Forms.TextBox();
             this.btnSair = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.resultado = new System.Windows.Forms.Label();
+            this.resultado1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto1)).BeginInit();
             this.SuspendLayout();
@@ -130,14 +130,19 @@
             // 
             // picFoto
             // 
+            this.picFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto.BackgroundImage")));
+            this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto.Location = new System.Drawing.Point(12, 358);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(68, 50);
             this.picFoto.TabIndex = 7;
             this.picFoto.TabStop = false;
+            this.picFoto.Click += new System.EventHandler(this.picFoto_Click);
             // 
             // picFoto1
             // 
+            this.picFoto1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picFoto1.BackgroundImage")));
+            this.picFoto1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto1.Location = new System.Drawing.Point(12, 429);
             this.picFoto1.Name = "picFoto1";
             this.picFoto1.Size = new System.Drawing.Size(68, 50);
@@ -183,45 +188,25 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "PLACAR";
             // 
-            // label7
+            // resultado
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(373, 332);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 25);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Jogador 1:";
+            this.resultado.AutoSize = true;
+            this.resultado.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultado.Location = new System.Drawing.Point(489, 332);
+            this.resultado.Name = "resultado";
+            this.resultado.Size = new System.Drawing.Size(23, 25);
+            this.resultado.TabIndex = 15;
+            this.resultado.Text = "0";
             // 
-            // label8
+            // resultado1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(373, 383);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 25);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Jogador 2:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(489, 332);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(23, 25);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "0";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(489, 383);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 25);
-            this.label10.TabIndex = 16;
-            this.label10.Text = "0";
+            this.resultado1.AutoSize = true;
+            this.resultado1.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.resultado1.Location = new System.Drawing.Point(489, 383);
+            this.resultado1.Name = "resultado1";
+            this.resultado1.Size = new System.Drawing.Size(23, 25);
+            this.resultado1.TabIndex = 16;
+            this.resultado1.Text = "0";
             // 
             // label4
             // 
@@ -233,14 +218,34 @@
             this.label4.TabIndex = 17;
             this.label4.Text = "JOGADOR";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(373, 383);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 25);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Jogador 2:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(373, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(107, 25);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Jogador 1:";
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(608, 511);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.resultado1);
+            this.Controls.Add(this.resultado);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -281,10 +286,10 @@
         private System.Windows.Forms.TextBox txtJogador2;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label resultado;
+        private System.Windows.Forms.Label resultado1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

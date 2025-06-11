@@ -136,5 +136,33 @@ namespace ImagensDinamicas
                 picFoto1.BackColor = Color.LightGray; 
             }
         }
+
+        private void CheckFoto_Click(object sender, EventArgs e)
+        {
+            if (CheckFoto.Checked)
+            {
+                picFoto.Visible = true;
+                btnCarregarFoto.Visible = true;
+            }
+            else
+            {
+                picFoto.Visible = false;
+                btnCarregarFoto.Visible = false;
+            }
+        }
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                picFoto1.Visible = true;
+                btnCarregarFoto2.Visible = true;
+            }
+            else
+            {
+                picFoto1.Visible = false;
+                btnCarregarFoto2.Visible = false;
+            }
+        }
     }
 }
